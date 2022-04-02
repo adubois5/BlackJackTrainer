@@ -9,3 +9,5 @@ class Card:
 
         # Creates the facedown display of the card:
         self.facedown = "┌─────────┐" + "|         |" * 4 + "└─────────┘"
+    def __str__ (self):
+        print(self.value + " of " + self.suit)
