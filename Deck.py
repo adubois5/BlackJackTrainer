@@ -27,7 +27,6 @@ class Deck:
         while card != None:
             print(card)
             card = card.next
-            
 
     def createDeck(self):
         # Generates linked list of 52 cards:

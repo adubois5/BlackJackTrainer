@@ -17,5 +17,12 @@ Stand - Stops and lets dealer play
 Split - Only once on pairs - No doubles after split
 Double - Draw one card
 
-## Check for correct move and ensure right one was done
+## Future training tools
+Check for correct move and ensure right one was done
 Card count check
+
+## Current likely errors:
+Deck creation
+Deck Addition
+Deck toString function
+Test LL to ensure safety
