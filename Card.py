@@ -5,9 +5,10 @@ class Card:
         self.suit = _suit
 
         # Create the faceup display of the card:
-        self.faceUp = ("┌─────────┐" + "| {}       |" + "|         |" + "|    {}    |" + "|         |" + "|       {} |"+"└─────────┘").format(_value, _suit, _value)
+        self.faceUp = ("┌─────────┐" + "\n| {}       |" + "\n|         |" + "\n|    {}    |" + "\n|         |" + "\n|       {} |"+"\n└─────────┘").format(_value, _suit, _value)
 
         # Creates the facedown display of the card:
-        self.facedown = "┌─────────┐" + "|         |" * 4 + "└─────────┘"
+        self.facedown = "\n┌─────────┐" + "\n|         |" * 4 + "\n└─────────┘"
     def __str__ (self):
-        print(self.value + " of " + self.suit)
+        returnString = str(self.value) + " of " + self.suit + "\n"
+        return returnString
