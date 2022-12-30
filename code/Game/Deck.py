@@ -1,6 +1,4 @@
-from typing import Type
-from Card import *
-from CardLL import CardLL
+from code.Cards import CardLL, Card
 
 class Deck:
     def __init__(self): 
@@ -8,11 +6,11 @@ class Deck:
     
     def __add__(self,other):
         try:
-            if type(other) == Card():
+            if str(type(other)) == "<class 'Card.Card'>":
                 self.cardLL.addCard(other)
-            elif type(other) == Deck():
+            elif str(type(other)) == "<class '__main__.Deck'>" or str(type(other)) == "<class 'Deck.Deck'>":
                 card = other.cardLL.getCard()
-                while card != None:
+                while card.data != None:
                     self.cardLL.addCard(card)
                     other.cardLL.popCard() # Might cause pointer issues
                     card = card.next
@@ -27,7 +25,7 @@ class Deck:
         returnString += self.cardLL.__str__()
         return returnString
     def shuffleDeck(self):
-        self.cardLL = self.cardLL.shuffleList()
+        self.cardLL = self.cardLL.shuffleCardLL()
         return self
     def createDeck(self):
         # Generates linked list of 52 cards:

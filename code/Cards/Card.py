@@ -10,5 +10,8 @@ class Card:
         # Creates the facedown display of the card:
         self.facedown = "\n┌─────────┐" + "\n|         |" * 4 + "\n└─────────┘"
     def __str__ (self):
-        returnString = str(self.value) + " of " + self.suit + "\n"
+        if (self.value == None):
+            return ""
+        else:
+            returnString = str(self.value) + " of " + self.suit + "\n"
         return returnString
